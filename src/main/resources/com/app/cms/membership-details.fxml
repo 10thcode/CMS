@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" spacing="10.0" style="-fx-background-color: #263238;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.cms.controllers.MembershipDetails">
+   <VBox alignment="TOP_CENTER" maxWidth="500.0" minWidth="500.0" prefWidth="500.0" spacing="20.0" style="-fx-background-color: #37474f;" VBox.vgrow="ALWAYS">
+      <padding>
+         <Insets bottom="20.0" top="20.0" />
+      </padding>
+      <Label graphicTextGap="20.0" text="Full Name Here" textFill="WHITE" wrapText="true">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@images/profile-icon.png" />
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Separator prefWidth="200.0" style="-fx-background-color: grey;" />
+      <VBox alignment="CENTER">
+         <Label graphicTextGap="20.0" text="Membership ID" textFill="#91eaf8" wrapText="true">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Label>
+         <Label graphicTextGap="20.0" layoutX="182.0" layoutY="10.0" text="Details Here" textFill="WHITE" wrapText="true">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Label>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="10.0" layoutY="153.0">
+         <Label graphicTextGap="20.0" text="Date Of Birth" textFill="#91eaf8" wrapText="true">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Label>
+         <Label graphicTextGap="20.0" layoutX="182.0" layoutY="10.0" text="Details Here" textFill="WHITE" wrapText="true">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Label>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="10.0" layoutY="153.0">
+         <Label graphicTextGap="20.0" text="Phone Number" textFill="#91eaf8" wrapText="true">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Label>
+         <Label graphicTextGap="20.0" layoutX="182.0" layoutY="10.0" text="Details Here" textFill="WHITE" wrapText="true">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Label>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="10.0" layoutY="303.0">
+         <Label graphicTextGap="20.0" text="Residence" textFill="#91eaf8" wrapText="true">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Label>
+         <Label graphicTextGap="20.0" layoutX="182.0" layoutY="10.0" text="Details Here" textFill="WHITE" wrapText="true">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Label>
+      </VBox>
+   </VBox>
+   <HBox alignment="CENTER" maxWidth="500.0" minWidth="500.0" prefWidth="500.0" spacing="100.0" style="-fx-background-color: #37474f;">
+      <padding>
+         <Insets bottom="10.0" top="10.0" />
+      </padding>
+      <StackPane layoutX="234.0" layoutY="20.0" minHeight="39.0" minWidth="51.0" onMouseClicked="#delete_button_onclick" onMouseEntered="#delete_button_onhover" onMouseExited="#delete_button_outhover">
+         <ImageView fx:id="delete_button" fitHeight="150.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_CENTER">
+            <Image url="@images/delete-button-icon.png" />
+         </ImageView>
+         <Label fx:id="delete_button_text" text="Delete" textFill="WHITE" visible="false" StackPane.alignment="BOTTOM_CENTER">
+            <font>
+               <Font name="System Bold" size="10.0" />
+            </font>
+         </Label>
+      </StackPane>
+      <StackPane layoutX="385.0" layoutY="20.0" minHeight="39.0" minWidth="51.0" onMouseClicked="#edit_button_onclick" onMouseEntered="#edit_button_onhover" onMouseExited="#edit_button_outhover">
+         <ImageView fx:id="edit_button" fitHeight="150.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_CENTER">
+            <Image url="@images/edit-tab-icon.png" />
+         </ImageView>
+         <Label fx:id="edit_button_text" text="Edit" textFill="WHITE" visible="false" StackPane.alignment="BOTTOM_CENTER">
+            <font>
+               <Font name="System Bold" size="10.0" />
+            </font>
+         </Label>
+      </StackPane>
+      <StackPane minHeight="39.0" minWidth="51.0" onMouseClicked="#back_button_onclick" onMouseEntered="#back_button_onhover" onMouseExited="#back_button_outhover">
+         <ImageView fx:id="back_button" fitHeight="150.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_CENTER">
+            <Image url="@images/back-button-icon.png" />
+         </ImageView>
+         <Label fx:id="back_button_text" text="Back" textFill="WHITE" visible="false" StackPane.alignment="BOTTOM_CENTER">
+            <font>
+               <Font name="System Bold" size="10.0" />
+            </font>
+         </Label>
+      </StackPane>
+   </HBox>
+   <padding>
+      <Insets left="10.0" right="10.0" />
+   </padding>
+</VBox>

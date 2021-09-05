@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" spacing="10.0" style="-fx-background-color: #263238;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.cms.controllers.MembershipRecords">
+   <HBox alignment="CENTER" layoutX="80.0" layoutY="430.0" maxWidth="500.0" minWidth="500.0" prefWidth="500.0" spacing="10.0" style="-fx-background-color: #37474f;">
+      <padding>
+         <Insets bottom="10.0" top="10.0" />
+      </padding>
+      <TextField fx:id="search_bar" focusTraversable="false" maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="Search by Membership ID or Name" style="-fx-border-width: 4; -fx-border-color: #00bcd4; -fx-border-radius: 5; -fx-background-radius: 5;" />
+      <ImageView fx:id="search_button" fitHeight="150.0" fitWidth="50.0" layoutX="235.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@images/search-button-icon.png" />
+      </ImageView>
+   </HBox>
+   <AnchorPane maxWidth="500.0" minWidth="500.0" prefWidth="500.0" style="-fx-background-color: #37474f;" VBox.vgrow="ALWAYS">
+      <ListView AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+   </AnchorPane>
+   <HBox alignment="CENTER" maxWidth="500.0" minWidth="500.0" prefWidth="500.0" spacing="100.0" style="-fx-background-color: #37474f;">
+      <padding>
+         <Insets bottom="10.0" top="10.0" />
+      </padding>
+      <StackPane minHeight="39.0" minWidth="51.0" onMouseClicked="#home_button_onclick" onMouseEntered="#home_button_onhover" onMouseExited="#home_button_outhover">
+         <ImageView fx:id="home_button" fitHeight="150.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_CENTER">
+            <Image url="@images/home-button-icon.png" />
+         </ImageView>
+         <Label fx:id="home_button_text" text="Home" textFill="WHITE" visible="false" StackPane.alignment="BOTTOM_CENTER">
+            <font>
+               <Font name="System Bold" size="10.0" />
+            </font>
+         </Label>
+      </StackPane>
+   </HBox>
+   <padding>
+      <Insets left="10.0" right="10.0" />
+   </padding>
+</VBox>
