@@ -1,5 +1,6 @@
 package com.app.cms.controllers;
 
+import com.app.cms.DbManipulation.DbManipulation;
 import com.app.cms.Main;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -7,6 +8,7 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.ResultSet;
 
 public class ChangePassword {
 
@@ -20,10 +22,16 @@ public class ChangePassword {
     public void submit_button_onclick() throws IOException {
         //Check username and old password from the database
 
-        if (new_password.getText().length() < 8){
+        String user = username.getText();
+        String pass = old_password.getText();
+        String newPass = new_password.getText();
+
+        String verdict = checkCredentials(user, pass, newPass);
+
+        if (new_password.getText().length() < 6){
             Alert alert = new Alert(Alert.AlertType.ERROR, "Password must be at least 8 characters");
             alert.showAndWait();
-        }else if (!confirm_new_password.getText().equals(new_password.getText())){
+        }else if (!confirm_new_password.getText().equals(new_password.getText()) && !verdict.equals("success")){
             Alert mismatch = new Alert(Alert.AlertType.ERROR, "Password mismatch");
             mismatch.showAndWait();
         }else {
@@ -46,4 +54,34 @@ public class ChangePassword {
         stage.setScene(scene);
         stage.setTitle("Login");
     }
+
+    //-----------------------HELPER METHODS---------------------------------
+
+    private String checkCredentials(String user, String pass, String nPass){
+
+
+        DbManipulation dbManipulation = new DbManipulation();
+        ResultSet r;
+        String result = "";
+
+        String query = String.format("SELECT username, password from LOGIN_TABLE WHERE username = '%s' and password = '%s'", user, pass ) ;
+        try{
+
+            r = dbManipulation.retrieveData(query);
+            if (r != null){
+                while (r.next()){
+                    String QueryToUpdate = String.format("UPDATE LOGIN_TABLE SET password = '%s' WHERE username = '%s'", nPass, user);
+                    dbManipulation.InsertIntoDb(QueryToUpdate);
+                    result = "success";
+                }
+            }
+
+        }catch (Exception e){
+
+        }
+
+        return result;
+
+    }
+
 }
