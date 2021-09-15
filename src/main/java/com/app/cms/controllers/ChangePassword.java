@@ -1,10 +1,12 @@
 package com.app.cms.controllers;
 
+import com.app.cms.Animations.Animations;
 import com.app.cms.DbManipulation.DbManipulation;
 import com.app.cms.Main;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -84,4 +86,11 @@ public class ChangePassword {
 
     }
 
+    public void SubmitEntered(MouseEvent mouseEvent) {
+       Animations.OnMouseEnteredForButtons(submit_button);
+    }
+
+    public void SubmitExited(MouseEvent mouseEvent) {
+        Animations.OnMouseExitedForButtons(submit_button);
+    }
 }

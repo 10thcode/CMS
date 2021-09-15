@@ -8,14 +8,14 @@
 
 <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" spacing="10.0" style="-fx-background-color: #263238;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.cms.controllers.TitheRecords">
     <AnchorPane style="-fx-background-color: #37474f;" VBox.vgrow="ALWAYS">
-          <TableView prefHeight="374.0" prefWidth="751.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+          <TableView fx:id="TitheTable" prefHeight="374.0" prefWidth="751.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
               <columns>
-                  <TableColumn prefWidth="75.0" text="DATE" />
-                  <TableColumn prefWidth="75.0" text="MEMBER" />
-                  <TableColumn prefWidth="75.0" text="AMOUNT" />
-                  <TableColumn prefWidth="75.0" text="PAYMENT MODE" />
-                  <TableColumn prefWidth="75.0" text="OFFICER" />
-                  <TableColumn prefWidth="75.0" text="TIME" />
+                  <TableColumn  fx:id="date" prefWidth="75.0" text="DATE" />
+                  <TableColumn fx:id="member" prefWidth="75.0" text="MEMBER" />
+                  <TableColumn fx:id="amount" prefWidth="75.0" text="AMOUNT" />
+                  <TableColumn fx:id="paymentMode" prefWidth="75.0" text="PAYMENT MODE" />
+                  <TableColumn fx:id="officer" prefWidth="75.0" text="OFFICER" />
+                  <TableColumn fx:id="time" prefWidth="75.0" text="TIME" />
               </columns>
               <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

@@ -109,10 +109,10 @@ public class AttendanceForm {
         try {
             dbManipulation.InsertIntoDb(Query);
         }catch (Exception e){
-            e.printStackTrace();
+//            e.printStackTrace();
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("ERROR");
-            alert.setContentText("Could not insert data");
+            alert.setContentText("Could not insert data, an unknown error occurred.");
             alert.showAndWait();
         }
 

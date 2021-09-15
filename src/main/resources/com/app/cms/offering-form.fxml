@@ -1,49 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" spacing="10.0" style="-fx-background-color: #263238;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.cms.controllers.OfferingForm">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" spacing="10.0" style="-fx-background-color: #263238;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.cms.controllers.OfferingForm">
    <ScrollPane hbarPolicy="NEVER" maxWidth="500.0" minWidth="500.0" prefWidth="500.0" style="-fx-background-color: #37474f; -fx-background: transparent;" VBox.vgrow="ALWAYS">
       <VBox alignment="TOP_CENTER" prefWidth="481.0" spacing="30.0">
          <padding>
             <Insets bottom="20.0" top="20.0" />
          </padding>
-         <DatePicker fx:id="date" maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="Date" style="-fx-border-color: #00bcd4; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" />
-         <ChoiceBox fx:id="service" maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" prefHeight="40.0" prefWidth="300.0" style="-fx-border-color: #00bcd4; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" />
-         <TextField fx:id="amount" layoutX="101.0" layoutY="30.0" maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="Amount" style="-fx-border-width: 4; -fx-border-color: #00bcd4; -fx-border-radius: 5; -fx-background-radius: 5;" />
+         <DatePicker fx:id="date" editable="false" maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="Date" style="-fx-border-color: #00bcd4; -fx-border-width: 3; -fx-border-radius: 2; -fx-background-radius: 5;" />
+         <ChoiceBox fx:id="service" maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" prefHeight="40.0" prefWidth="300.0" style="-fx-border-color: #00bcd4; -fx-border-width: 3; -fx-border-radius: 2; -fx-background-radius: 5;" />
+         <TextField fx:id="amount" alignment="CENTER" layoutX="101.0" layoutY="30.0" maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="Amount" style="-fx-border-width: 3; -fx-border-color: #00bcd4; -fx-border-radius: 2; -fx-background-radius: 5;">
+            <font>
+               <Font name="Trebuchet MS" size="18.0" />
+            </font></TextField>
       </VBox>
    </ScrollPane>
    <HBox alignment="CENTER" maxWidth="500.0" minWidth="500.0" prefWidth="500.0" spacing="100.0" style="-fx-background-color: #37474f;">
       <padding>
          <Insets bottom="10.0" top="10.0" />
       </padding>
-      <StackPane minHeight="39.0" minWidth="51.0" onMouseClicked="#save_button_onclick"
-                 onMouseEntered="#save_button_onhover" onMouseExited="#save_button_outhover">
-         <ImageView fx:id="save_button" fitWidth="50.0" pickOnBounds="true" preserveRatio="true"
-                    StackPane.alignment="TOP_CENTER">
-            <Image url="@images/save-button-icon.png"/>
+      <StackPane minHeight="39.0" minWidth="51.0" onMouseClicked="#save_button_onclick" onMouseEntered="#save_button_onhover" onMouseExited="#save_button_outhover">
+         <ImageView fx:id="save_button" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_CENTER">
+            <Image url="@images/save-button-icon.png" />
          </ImageView>
-         <Label fx:id="save_button_text" text="Save" textFill="WHITE" visible="false"
-                StackPane.alignment="BOTTOM_CENTER">
+         <Label fx:id="save_button_text" text="Save" textFill="WHITE" visible="false" StackPane.alignment="BOTTOM_CENTER">
             <font>
-               <Font name="System Bold" size="10.0"/>
+               <Font name="System Bold" size="10.0" />
             </font>
          </Label>
       </StackPane>
-      <StackPane minHeight="39.0" minWidth="51.0" onMouseClicked="#cancel_button_onclick"
-                 onMouseEntered="#cancel_button_onhover" onMouseExited="#cancel_button_outhover">
-         <ImageView fx:id="cancel_button" fitHeight="150.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true"
-                    StackPane.alignment="TOP_CENTER">
-            <Image url="@images/cancel-button-icon.png"/>
+      <StackPane minHeight="39.0" minWidth="51.0" onMouseClicked="#cancel_button_onclick" onMouseEntered="#cancel_button_onhover" onMouseExited="#cancel_button_outhover">
+         <ImageView fx:id="cancel_button" fitHeight="150.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_CENTER">
+            <Image url="@images/cancel-button-icon.png" />
          </ImageView>
-         <Label fx:id="cancel_button_text" text="Cancel" textFill="WHITE" visible="false"
-                StackPane.alignment="BOTTOM_CENTER">
+         <Label fx:id="cancel_button_text" text="Cancel" textFill="WHITE" visible="false" StackPane.alignment="BOTTOM_CENTER">
             <font>
-               <Font name="System Bold" size="10.0"/>
+               <Font name="System Bold" size="10.0" />
             </font>
          </Label>
       </StackPane>

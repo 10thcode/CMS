@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
@@ -33,6 +34,7 @@ public class Forms {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("records.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage) records_tab.getScene().getWindow();
+        stage.getIcons().add(new Image("file:src/main/resources/com/app/cms/images/icon.png"));
         stage.setScene(scene);
         stage.setTitle("Home-Records");
     }
@@ -41,6 +43,7 @@ public class Forms {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("membership-form.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage) membership_tab.getScene().getWindow();
+        stage.getIcons().add(new Image("file:src/main/resources/com/app/cms/images/icon.png"));
         stage.setScene(scene);
         stage.setTitle("Membership Form");
     }
@@ -49,6 +52,7 @@ public class Forms {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("offering-form.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage) offering_tab.getScene().getWindow();
+        stage.getIcons().add(new Image("file:src/main/resources/com/app/cms/images/icon.png"));
         stage.setScene(scene);
         stage.setTitle("Offering-Form");
     }
@@ -57,6 +61,7 @@ public class Forms {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("tithe-form.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage) tithe_tab.getScene().getWindow();
+        stage.getIcons().add(new Image("file:src/main/resources/com/app/cms/images/icon.png"));
         stage.setScene(scene);
         stage.setTitle("Tithe Form");
     }
@@ -65,6 +70,7 @@ public class Forms {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("attendance-form.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage) attendance_tab.getScene().getWindow();
+        stage.getIcons().add(new Image("file:src/main/resources/com/app/cms/images/icon.png"));
         stage.setScene(scene);
         stage.setTitle("Attendance Form");
     }
@@ -126,6 +132,7 @@ public class Forms {
             FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("login.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage stage = (Stage) membership_tab.getScene().getWindow();
+            stage.getIcons().add(new Image("file:src/main/resources/com/app/cms/images/icon.png"));
             stage.setScene(scene);
             stage.setTitle("Login");
         }

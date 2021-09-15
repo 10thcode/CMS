@@ -1,10 +1,16 @@
 package com.app.cms.controllers;
 
+import animatefx.animation.FadeIn;
+import animatefx.animation.FadeOut;
+import com.app.cms.Animations.Animations;
 import com.app.cms.DbManipulation.DbManipulation;
 import com.app.cms.Main;
+import javafx.animation.Animation;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -36,11 +42,17 @@ public class Login {
                 FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("forms.fxml"));
                 Scene scene = new Scene(fxmlLoader.load());
                 Stage stage = (Stage) login_button.getScene().getWindow();
+                stage.getIcons().add(new Image("file:src/main/resources/com/app/cms/images/icon.png"));
                 stage.setScene(scene);
                 stage.setTitle("Home-Forms");
+
+
+
+
         } else {
             Alert incorrect = new Alert(Alert.AlertType.ERROR, "Incorrect username or password");
             incorrect.showAndWait();
+            FadeIn fadeIn = new FadeIn();
         }
     }
 
@@ -71,4 +83,41 @@ public class Login {
 
     }
 
+    public void MouseEntered(MouseEvent mouseEvent) {
+
+//        Animations animations = new Animations();
+        Animations.OnMouseEnteredForButtons(login_button);
+
+
+    }
+
+    public void MouseExited(MouseEvent mouseEvent) {
+
+        Animations.OnMouseExitedForButtons(login_button);
+
+    }
+
+    public void MouseEnteredForTextField(MouseEvent mouseEvent) {
+
+        Animations.OnMouseEnteredForTextFields(username);
+//        Animations.OnMouseEnteredForTextFields(password);
+
+    }
+
+    public void MouseExitedForTextField(MouseEvent mouseEvent) {
+
+        Animations.OnMouseExitedForTextFields(username);
+//        Animations.OnMouseExitedForTextFields(password);
+
+    }
+
+    public void MouseEnteredForPassword(MouseEvent mouseEvent) {
+
+        Animations.OnMouseEnteredForTextFields(password);
+
+    }
+
+    public void MouseExitedForPassword(MouseEvent mouseEvent) {
+        Animations.OnMouseExitedForTextFields(password);
+    }
 }

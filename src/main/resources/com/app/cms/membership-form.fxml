@@ -1,24 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" prefHeight="480.0" spacing="10.0" style="-fx-background-color: #263238;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.cms.controllers.MembershipForm">
+<VBox alignment="TOP_CENTER" prefHeight="480.0" spacing="10.0" style="-fx-background-color: #263238;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.cms.controllers.MembershipForm">
    <ScrollPane hbarPolicy="NEVER" maxWidth="500.0" minWidth="500.0" prefWidth="500.0" style="-fx-background-color: #37474f; -fx-background: transparent;" VBox.vgrow="ALWAYS">
       <VBox alignment="TOP_CENTER" prefWidth="481.0" spacing="30.0">
          <padding>
             <Insets bottom="20.0" top="20.0" />
          </padding>
-         <TextField layoutX="101.0" layoutY="30.0" maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="Membership ID" style="-fx-border-width: 4; -fx-border-color: #00bcd4; -fx-border-radius: 5; -fx-background-radius: 5;" />
-         <TextField maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="First Name" style="-fx-border-width: 4; -fx-border-color: #00bcd4; -fx-border-radius: 5; -fx-background-radius: 5;" />
-         <TextField layoutX="101.0" layoutY="30.0" maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="Surname" style="-fx-border-width: 4; -fx-border-color: #00bcd4; -fx-border-radius: 5; -fx-background-radius: 5;" />
-         <TextField layoutX="101.0" layoutY="100.0" maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="Other Name" style="-fx-border-width: 4; -fx-border-color: #00bcd4; -fx-border-radius: 5; -fx-background-radius: 5;" />
-         <DatePicker maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="Date Of Birth" style="-fx-border-color: #00bcd4; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" />
-         <TextField layoutX="101.0" layoutY="100.0" maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="Phone Number" style="-fx-border-width: 4; -fx-border-color: #00bcd4; -fx-border-radius: 5; -fx-background-radius: 5;" />
-         <TextField layoutX="101.0" layoutY="380.0" maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="Residence" style="-fx-border-width: 4; -fx-border-color: #00bcd4; -fx-border-radius: 5; -fx-background-radius: 5;" />
+         <TextField fx:id="MembershipId" alignment="CENTER" editable="false" layoutX="101.0" layoutY="30.0" maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="Membership ID" style="-fx-border-width: 3; -fx-border-color: #00bcd4; -fx-border-radius: 2; -fx-background-radius: 5;">
+            <font>
+               <Font name="Trebuchet MS" size="18.0" />
+            </font></TextField>
+         <TextField fx:id="FirstName" alignment="CENTER" maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="First Name" style="-fx-border-width: 3; -fx-border-color: #00bcd4; -fx-border-radius: 2; -fx-background-radius: 5;">
+            <font>
+               <Font name="Trebuchet MS" size="18.0" />
+            </font></TextField>
+         <TextField fx:id="Surname" alignment="CENTER" layoutX="101.0" layoutY="30.0" maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="Surname" style="-fx-border-width: 3; -fx-border-color: #00bcd4; -fx-border-radius: 2; -fx-background-radius: 5;">
+            <font>
+               <Font name="Trebuchet MS" size="18.0" />
+            </font></TextField>
+         <TextField fx:id="OtherName" alignment="CENTER" layoutX="101.0" layoutY="100.0" maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="Other Name" style="-fx-border-width: 3; -fx-border-color: #00bcd4; -fx-border-radius: 2; -fx-background-radius: 5;">
+            <font>
+               <Font name="Trebuchet MS" size="18.0" />
+            </font></TextField>
+         <DatePicker fx:id="DateOfBirth" editable="false" maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="Date Of Birth" showWeekNumbers="true" style="-fx-border-color: #00bcd4; -fx-border-width: 3; -fx-border-radius: 2; -fx-background-radius: 5;" />
+         <TextField fx:id="PhoneNumber" alignment="CENTER" layoutX="101.0" layoutY="100.0" maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="Phone Number" style="-fx-border-width: 3; -fx-border-color: #00bcd4; -fx-border-radius: 2; -fx-background-radius: 5;">
+            <font>
+               <Font name="Trebuchet MS" size="18.0" />
+            </font></TextField>
+         <TextField fx:id="Residence" alignment="CENTER" layoutX="101.0" layoutY="380.0" maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" prefHeight="40.0" prefWidth="300.0" promptText="Residence" style="-fx-border-width: 3; -fx-border-color: #00bcd4; -fx-border-radius: 2; -fx-background-radius: 5;">
+            <font>
+               <Font name="Trebuchet MS" size="18.0" />
+            </font></TextField>
       </VBox>
    </ScrollPane>
    <HBox alignment="CENTER" maxWidth="500.0" minWidth="500.0" prefWidth="500.0" spacing="100.0" style="-fx-background-color: #37474f;">
